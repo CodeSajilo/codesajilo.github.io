@@ -1,6 +1,7 @@
 import { add, sub } from './lib/math.js';
 import  './styles/a.css';
-//import './test.jcs';
+import csLoaderFn from './cs/test.nep';
+import csLoaderFn2 from './cs/test2.nep';
 
 const op = {add, sub};
 const res = document.getElementById('res');
@@ -14,3 +15,5 @@ document.querySelectorAll('button')
     }));
 
 console.log('Index.js');
+csLoaderFn();
+csLoaderFn2();

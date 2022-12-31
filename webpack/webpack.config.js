@@ -1,7 +1,7 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 const outputPath = path.resolve(__dirname, 'dist');
-console.log('CodeSajilo output path:::', outputPath)
+
 module.exports = {
     mode: 'development',
     entry: {
@@ -17,6 +17,13 @@ module.exports = {
             {
                 test: /.css$/,
                 use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /.nep$/,
+                // use: {
+                //     loader: path.resolve('./config/cs-loader.js')
+                // }
+                use: ['cs-loader']
             }
         ]
     },
